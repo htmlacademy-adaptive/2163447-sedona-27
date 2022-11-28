@@ -8,14 +8,14 @@
     <header class="main-header">
       <a class="main-header__logo">
         <img
-          src="img/background/logotype-phone.png"
+          src="./img/background/logotype-phone.png"
           width="185"
           height="96"
           alt="Логотип Седоны.">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
+          <span class="visually-hidden">Открыть/закрыть меню.</span>
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -23,7 +23,7 @@
               <a href="#">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="photo.html">Фото и видео</a>
+              <a href="catalog.html">Фото и видео</a>
             </li>
             <li class="main-nav__item">
               <a href="form.html">Форма отзыва</a>
@@ -48,71 +48,61 @@
               Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
             </p>
           </header>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <div class="advantages__content">
-                <div class="advantages__wrapper">
-                  <h3 class="advantages__heading">
-                    Настоящий<br>
-                    городок
-                  </h3>
-                  <span class="advantages__number">- № 1 -</span>
+          <div class="advantages__card">
+            <div class="advantages__card-content">
+              <h3 class="advantages__card-title">
+                Настоящий<br>
+                городок
+              </h3>
+              <span class="advantages__number">- № 1 -</span>
                   <p class="advantages__description">
                     Седона не аттракцион для туристов,там течет своя жизнь
                   </p>
-                </div>
-                <div class="advantages__pic">
-                  <img
-                    src="img/background/photo-city.jpg"
+            </div>
+            <img
+                    src="./img/background/photo-city.jpg"
                     width="520"
                     height="260"
                     alt="Фото городка Седона.">
-                </div>
-              </div>
-              <div class="advantages-details">
-                <ul class="advantages-details__list">
-                  <li class="advantages-details__item advantages-details__item--housing">
-                    <h3 class="advantages-details__title">Жилье</h3>
-                    <p class="advantages-details__description">
-                      Рекомендуем пожить в настоящем мотеле, все как в кино!
-                    </p>
-                  </li>
-                  <li class="advantages-details__item advantages-details__item--food">
-                    <h3 class="advantages-details__title">Еда</h3>
-                    <p class="advantages-details__description">
-                      Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-                    </p>
-                  </li>
-                  <li class="advantages-details__item advantages-details__item--presents">
-                    <h3 class="advantages-details__title">Сувениры</h3>
-                    <p class="advantages-details__description">
-                      Не только китайского, но и местного производства!
-                    </p>
-                  </li>
-                </ul>
-              </div>
+          </div>
+          <ul class="advantages__details-list">
+            <li class="advantages__details-item advantages__details-item--housing">
+              <h3 class="advantages__details-title">Жилье</h3>
+              <p class="advantages__details-description">
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
+              </p>
             </li>
-            <li class="advantages__item">
-              <div class="advantages__content">
-                <div class="advantages__wrapper">
-                  <h3 class="advantages__heading">
-                    Там есть<br>
-                    мост дьявола
-                  </h3>
-                  <span class="advantages__number">- № 2 -</span>
+            <li class="advantages__details-item advantages__details-item--food">
+              <h3 class="advantages__details-title">Еда</h3>
+              <p class="advantages__details-description">
+                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+              </p>
+            </li>
+            <li class="advantages__details-item advantages__details-item--presents">
+              <h3 class="advantages__details-title">Сувениры</h3>
+              <p class="advantages__details-description">
+                Не только китайского, но и местного производства!
+              </p>
+            </li>
+          </ul>
+          <div class="advantages__card">
+            <div class="advantages__card-content">
+              <h3 class="advantages__card-title">
+                Там есть<br>
+                мост Дьявола
+              </h3>
+              <span class="advantages__number">- № 2 -</span>
                   <p class="advantages__description">
                     Да, по нему можно пройти! Если вы осмелитесь, конечно
                   </p>
-                </div>
-                <div class="advantages__pic">
-                  <img
-                    src="img/background/photo-bridge.jpg"
+            </div>
+            <img
+                    src="./img/background/photo-bridge.jpg"
                     width="520"
                     height="260"
                     alt="Фото городка Седона.">
-                </div>
-              </div>
-            </li>
+          </div>
+          <ul class="advantages__list">
             <li class="advantages__item">
               <div class="advantages__wrapper">
                 <h3 class="advantages__heading">
@@ -154,14 +144,15 @@
       </section>
       <section class="booking">
         <div class="booking__wrapper">
-          <h2 class="visually-hidden">Забронируйте гостиницу в Седоне.</h2>
-          <h3 class="booking__heading">Заинтересовались?</h3>
-          <span class="booking__description">
+          <h2 class="booking__heading">Заинтересовались?</h2>
+          <p class="booking__description">
             Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в Седоне
-          </span>
+          </p>
           <a class="button" href="#">Найти гостиницу</a>
-          <img src="source/img/map.jpg" width="768" height="350" alt="Карта местонахождения Седоны.">
+          <div class="booking__map">
+            <img src="./img/background/map.jpg" width="768" height="350" alt="Карта местонахождения Седоны.">
+          </div>
         </div>
       </section>
     </main>
@@ -172,25 +163,25 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                Мы в Вконтакте
+                Мы в Вконтакте.
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-                Мы в Телеграме
+                Мы в Телеграме.
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-                Мы в Ютубе
+                Мы в Ютубе.
               </a>
             </li>
           </ul>
         </div>
         <div class="main-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmalcademy.ru/intensive/adaptive">
-            <img src="img/icons/htmlacademy.svg" width="27" height="34" alt="Логотип Html-academy.">
+            <span class="copyright__text">Разработано</span>
+            <img src="./img/icons/htmlacademy.svg" width="27" height="34" alt="Логотип Html-academy.">
           </a>
         </div>
       </div>
