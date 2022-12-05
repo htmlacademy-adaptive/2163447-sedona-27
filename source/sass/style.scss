@@ -1,9 +1,9 @@
-@import "./global/container.scss";
+@import "./variables.scss";
 @import "./global/fonts.scss";
 @import "./global/reboot.scss";
 @import "./global/utils.scss";
-@import "./variables.scss";
-@import "./vendor/normalize.scss";
+@import "./global/container.scss";
+
 @import "./blocks/advantages.scss";
 @import "./blocks/booking.scss";
 @import "./blocks/copyright.scss";
