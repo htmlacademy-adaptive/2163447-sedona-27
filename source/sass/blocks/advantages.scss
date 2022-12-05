@@ -28,7 +28,7 @@
   background-color: $color-seagull;
   color: $color-white;
 
-  @media  (min-width: $mobile-width) {
+  @media (min-width: $mobile-width) {
     background-color: $color-white;
     margin: 0;
   }
