@@ -1,0 +1,8 @@
+.main-container{
+  width: 100%;
+
+  @media (min-width: $mobile-width) {
+    background-color: $color-white;
+    margin: 0;
+  }
+}

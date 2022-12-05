@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -36,9 +37,10 @@
       </nav>
     </header>
     <main class="main-container">
+      <img src="./img/background/main-image.png" width="901" height="389" alt="Основное изображение Седоны.">
       <section class="contacts">
         <header class="contacts__header">
-          <h1 class="contacts__title">Оставьте свой отзыв</h1>
+          <h1 class="contacts__heading">Оставьте свой отзыв</h1>
           <p class="contacts__description">
             Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
@@ -84,7 +86,7 @@
               </fieldset>
               <fieldset class="contacts__form">
                 <legend class="contacts__title">Ваше общее впечатление:</legend>
-                <ul class="contacts__impressions">
+                <ul class="contacts__impressions-list">
                   <li class="contacts__impressions-item">
                     <label class="contacts__control">
                       <input class="contacts__control__radio" type="radio" name="impression" value="Скорее положительное" checked>
@@ -103,11 +105,11 @@
                       <span class="contacts__control__label">Затрудняюсь ответить</span>
                       </label>
                   </li>
-                 </ul>
+                </ul>
               </fieldset>
               <fieldset class="contacts__form">
                 <legend class="contacts__title">Посещенные достопримечательности:</legend>
-                <ul class="contacts__sights">
+                <ul class="contacts__sights-list">
                   <li class="contacts__sights-item">
                     <label class="contacts__control">
                       <input class="contacts__control__checkbox" type="checkbox" name="sights" value="Мост Дьявола" checked>
@@ -180,8 +182,3 @@
     </footer>
   </body>
 </html>
-
-
-
-
-
