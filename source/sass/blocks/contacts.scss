@@ -1,0 +1,77 @@
+.contacts__header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.contacts__heading {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.contacts__description {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.contacts__form {
+  margin: 0;
+  padding: 20px 24px;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.contacts__label {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.contacts__impressions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__impressions-item {
+  margin-bottom: 16px;
+  text-transform: lowercase;
+}
+
+.contacts__sights-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__sights-item {
+  margin-bottom: 16px;
+  text-transform: lowercase;
+}
+
+.contacts__emotions-button {
+  display: block;
+  background-color: $color-seagull;
+  color: $color-white;
+  padding: 16px 49px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  border: none;
+  margin: 0;
+}
+
+.contacts__emotions-legend {
+  color: $color-gray;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 24px;
+}
