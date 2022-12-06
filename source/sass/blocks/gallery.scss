@@ -7,7 +7,7 @@
 }
 
 .gallery__title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
@@ -31,14 +31,14 @@
 
 .gallery__heading {
   color: $color-black;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 5px;
 }
 
 .gallery__author {
-  color: $color-night-rider;
+  color: $color-gray;
   font-size: inherit;
   line-height: inherit;
   margin: 0;
@@ -58,7 +58,7 @@
 
 .gallery__likes--text {
   color: $color-black;
-  font-weight: bold;
+  font-weight: 700;
   font-size: inherit;
   line-height: inherit;
 }

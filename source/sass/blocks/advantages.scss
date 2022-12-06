@@ -10,7 +10,7 @@
 }
 
 .advantages__name {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
@@ -27,15 +27,10 @@
 .advantages__card-content {
   background-color: $color-seagull;
   color: $color-white;
-
-  @media (min-width: $mobile-width) {
-    background-color: $color-white;
-    margin: 0;
-  }
 }
 
 .advantages__card-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 11px;
@@ -65,7 +60,7 @@
 }
 
 .advantages__details-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 16px;
@@ -88,7 +83,7 @@
 }
 
 .advantages__heading {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 11px;
