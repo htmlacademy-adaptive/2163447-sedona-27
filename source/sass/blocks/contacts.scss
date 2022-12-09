@@ -1,13 +1,28 @@
 .contacts__header {
   margin-bottom: 28px;
+  padding: 36px 7px 28px 7px;
+
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 64px 166px 102px 167px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 115px 384px 67px 382px;
+  }
 }
 
 .contacts__heading {
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px 0;
+  }
 }
 
 .contacts__description {
@@ -18,60 +33,114 @@
 .contacts__form {
   margin: 0;
   padding: 20px 24px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    justify-content: space-between;
+    padding: 0 60px 64px 60px;
+
+    grid-template-columns: 280px 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    justify-content: space-between;
+    padding: 0 120px 64px 120px;
+
+    grid-template-columns: 4300px 430px;
+  }
+}
+
+.contacts__form-impression,
+.contacts__form-sight,
+.contacts__form-emotions {
+  @media (min-width: $tablet-width) {
+    grid-column-end: 3;
+    grid-column-start: 1;
+  }
 }
 
 .contacts__title {
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 28px 0;
+  }
+}
+
+.contacts__title-info {
+  margin: 0 0 28px 0;
+}
+
+.contacts__title-impression {
+  @media (min-width: $desktop-width) {
+    margin: 0 0 45px 0;
+  }
+}
+
+.contacts__title-sight {
+  @media (min-width: $desktop-width) {
+    margin: 0 0 59px 0;
+  }
 }
 
 .contacts__label {
+  margin: 0;
+
   font-size: 14px;
   line-height: 21px;
-  margin: 0;
 }
 
 .contacts__impressions-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .contacts__impressions-item {
   margin-bottom: 16px;
+
   text-transform: lowercase;
 }
 
 .contacts__sights-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .contacts__sights-item {
   margin-bottom: 16px;
+
   text-transform: lowercase;
 }
 
 .contacts__emotions-button {
   display: block;
-  background-color: $color-seagull;
-  color: $color-white;
+  margin: 0;
   padding: 16px 49px;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  color: $color-white;
   text-transform: uppercase;
+
+  background-color: $color-seagull;
   border: none;
-  margin: 0;
 }
 
 .contacts__emotions-legend {
-  color: $color-gray;
+  margin-bottom: 24px;
+
   font-weight: 400;
   font-size: inherit;
   line-height: inherit;
-  margin-bottom: 24px;
+  color: $color-gray;
 }

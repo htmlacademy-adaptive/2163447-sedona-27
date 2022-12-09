@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -14,7 +15,7 @@
           height="96"
           alt="Логотип Седоны.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav__closed main-nav__nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
@@ -64,7 +65,7 @@
                 </div>
               </fieldset>
               <fieldset class="contacts__form">
-                  <legend class="contacts__title">Контактная информация:</legend>
+                  <legend class="contacts__title contacts__title-info">Контактная информация:</legend>
                   <div class="contacts__form contacts__form--phone">
                     <label class="contacts__label" for="phone">Контактный телефон*:</label>
                     <input class="contacts__input" type="text" name="phone" placeholder="Введите телефон" id="phone">
@@ -84,8 +85,8 @@
                   </button>
                 </div>
               </fieldset>
-              <fieldset class="contacts__form">
-                <legend class="contacts__title">Ваше общее впечатление:</legend>
+              <fieldset class="contacts__form contacts__form-impression">
+                <legend class="contacts__title contacts__title-impression">Ваше общее впечатление:</legend>
                 <ul class="contacts__impressions-list">
                   <li class="contacts__impressions-item">
                     <label class="contacts__control">
@@ -107,8 +108,8 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="contacts__form">
-                <legend class="contacts__title">Посещенные достопримечательности:</legend>
+              <fieldset class="contacts__form contacts__form-sight">
+                <legend class="contacts__title contacts__title-sight">Посещенные достопримечательности:</legend>
                 <ul class="contacts__sights-list">
                   <li class="contacts__sights-item">
                     <label class="contacts__control">
@@ -136,7 +137,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="contacts__form">
+              <fieldset class="contacts__form contacts__form-emotions">
                 <legend class="contacts__title">Опишите свои эмоции:</legend>
                 <input class="contacts__emotions-input" type="text" name="emotions" placeholder="Опишите подробно все свои восторги" id="emotions">
               </fieldset>

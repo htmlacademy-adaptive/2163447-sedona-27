@@ -1,13 +1,14 @@
 .main-header {
-  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+
   color: $color-black;
-  margin: 0 auto;
-  width: 100%;
+
+  background-color: $color-white;
 }
 
 .main-header__logo {
   display: block;
-  width: 185px;
-  margin: 0 auto;
   height: 96px;
+  margin: 0 auto;
 }
