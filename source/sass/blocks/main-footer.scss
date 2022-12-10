@@ -1,14 +1,42 @@
 .main-footer {
   padding: 29px 82px 23px 82px;
-  background-color: $color-white;
+
+  text-align: center;
   color: $color-black;
-  width: 100%;
+
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 36px 76px 36px 45px;
+  }
+
+  @media (min-width: $desltop-width) {
+    padding: 36px 136px 36px 104px;
+  }
+}
+
+.main-footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: center;
+
+    gap: 100px;
+    grid-template-columns: 166px 156px 128px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 254px;
+  }
 }
 
 .main-footer__slogan {
+  margin: 0 0 33px 0;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  text-align: center;
-  margin-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }

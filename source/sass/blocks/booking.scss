@@ -1,34 +1,66 @@
 .booking {
+  margin: 0 0 10px 0;
   padding: 38px 18px 0 18px;
-  background-color: $color-white;
+
+  text-align: center;
   color: $color-black;
-  margin-bottom: 10px;
+
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 155px 0 155px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 61px 371px 0 371px;
+  }
 }
 
 .booking__heading {
+  margin: 0 0 11px 0;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin-bottom: 11px;
   text-align: center;
 }
 
 .booking__description {
+  margin: 0 0 32px 0;
+
   font-size: 12px;
   line-height: 18px;
   text-align: center;
-  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 40px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 45px 0;
+  }
 }
 
 .booking__button {
   display: block;
+  margin: 0 0 49px 0;
   padding: 16px 49px;
-  background-color: $color-seagull;
-  color: $color-white;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin-bottom: 49px;
+  text-align: center;
+  color: $color-white;
+
+  background-color: $color-seagull;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 58px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 66px 0;
+  }
 }
 
 .booking__map {
