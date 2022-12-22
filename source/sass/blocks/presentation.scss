@@ -1,38 +1,12 @@
 .presentation {
   width: 100%;
-  margin-bottom: 0;
+  margin: 0;
   padding: 17px 20px 0 20px;
 
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 58px 60px 40px 60px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 62px 201px 120px 201px;
+    padding: 0 60px 40px 60px;
   }
 }
 
-.presentation__title {
-  margin: 0 0 11px 0;
-
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-}
-
-.presentation__description {
-  margin: 0 0 38px 0;
-
-  font-size: 12px;
-  line-height: 14px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 66px 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 64px 0;
-  }
-}

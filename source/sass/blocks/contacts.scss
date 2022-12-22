@@ -1,60 +1,39 @@
-.contacts__header {
-  margin-bottom: 28px;
-  padding: 36px 7px 28px 7px;
-
-  text-align: center;
+.contacts__wrapper {
+  padding: 0 20px 24px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 64px 166px 102px 167px;
+    padding: 0 60px 64px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 115px 384px 67px 382px;
+    padding: 0 120px 64px 120px;
   }
-}
-
-.contacts__heading {
-  margin: 0 0 24px 0;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 20px 0;
-  }
-}
-
-.contacts__description {
-  font-size: 14px;
-  line-height: 21px;
 }
 
 .contacts__form {
   margin: 0;
-  padding: 20px 24px;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    justify-content: space-between;
-    padding: 0 60px 64px 60px;
-
-    grid-template-columns: 280px 280px;
+    grid-template-columns: 298px 298px;
+    gap: 88px;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    display: grid;
-    justify-content: space-between;
-    padding: 0 120px 64px 120px;
-
-    grid-template-columns: 4300px 430px;
-  }
+.contacts__form-names,
+.contacts__form-details {
+  display: grid;
+  grid-template-columns: 298px 298px;
+  gap: 88px;
 }
 
 .contacts__form-impression,
 .contacts__form-sight,
 .contacts__form-emotions {
   @media (min-width: $tablet-width) {
+
+
     grid-column-end: 3;
     grid-column-start: 1;
   }
@@ -89,6 +68,8 @@
 }
 
 .contacts__label {
+  position: relative;
+
   margin: 0;
 
   font-size: 14px;
@@ -105,7 +86,7 @@
 .contacts__impressions-item {
   margin-bottom: 16px;
 
-  text-transform: lowercase;
+  text-transform: none;
 }
 
 .contacts__sights-list {
@@ -118,7 +99,7 @@
 .contacts__sights-item {
   margin-bottom: 16px;
 
-  text-transform: lowercase;
+  text-transform: none;
 }
 
 .contacts__emotions-button {

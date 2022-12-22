@@ -1,0 +1,46 @@
+.heading {
+  padding: 32px 18px;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 47px 100px 55px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 59px 300px 44px 300px;
+  }
+}
+
+.heading__title {
+  margin: 0 0 35px 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-black;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px 0;
+
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+.heading__description {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-gray;
+  text-transform: uppercase;
+
+  mix-blend-mode: normal;
+
+  @media (min-width: $tablet-width) {
+    line-height: 24px;
+  }
+}
