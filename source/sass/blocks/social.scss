@@ -1,13 +1,39 @@
+
+
 .social__list {
-  margin-bottom: 40px;
+  display: grid;
+  margin: 0;
   padding: 0;
 
   list-style: none;
   color: $color-black;
 
   background-color: $color-white;
+
+  gap: 6px;
+  grid-template-columns: 48px 48px 48px;
 }
 
-.social__link {
-  display: block;
+.social__item {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+
+  background-color: $color-seagull;
+  border: none;
+
+  fill: #ffffff;
+
+  &:hover {
+    background-color: #669EC0;
+  }
+
+  &:active {
+    background-color: #5496BD;
+    opacity: 30%;
+  }
 }
+

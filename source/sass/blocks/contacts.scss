@@ -11,29 +11,44 @@
 }
 
 .contacts__form {
-  margin: 0;
+  position: relative;
+
+  margin: 0 auto;
   padding: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 298px 298px;
-    gap: 88px;
+
+    gap: 0 88px;
+    grid-template-columns: 280px 280px;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 0 128px;
+    grid-template-columns: 430px 402px;
   }
 }
 
 .contacts__form-names,
 .contacts__form-details {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__form--name,
+.contacts__form--surname,
+.contacts__form--patronymic,
+.contacts__form--phone,
+.contacts__form--email {
   display: grid;
-  grid-template-columns: 298px 298px;
-  gap: 88px;
+
+  grid-template-columns: 1fr;
 }
 
 .contacts__form-impression,
 .contacts__form-sight,
 .contacts__form-emotions {
   @media (min-width: $tablet-width) {
-
-
     grid-column-end: 3;
     grid-column-start: 1;
   }
@@ -45,6 +60,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 28px 0;
@@ -69,6 +85,7 @@
 
 .contacts__label {
   position: relative;
+  left: 16px;
 
   margin: 0;
 
@@ -76,17 +93,212 @@
   line-height: 21px;
 }
 
+.contacts__input {
+  position: relative;
+
+  margin: 0 0 16px 0;
+
+  background-color: $color-gray95;
+  border: none;
+}
+
+.contacts__input-name {
+  padding: 16px 19px 16px 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 57px 16px 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 152px 16px 16px;
+  }
+
+  &:default {
+    color: $color-black;
+
+    background-color: $color-gray95;
+  }
+
+  &:hover {
+    color: $color-black;
+
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    color: $color-black;
+
+    background-color: $color-white;
+    outline: 4px rgba(229, 229, 229, 1);
+  }
+}
+
+.contacts__input-phone,
+.contacts__input-email {
+  display: block;
+  padding: 16px 19px 16px 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 20px 16px 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 20px 16px 16px;
+  }
+
+  &:default {
+    color: $color-black;
+
+    background-color: $color-gray95;
+  }
+
+  &:hover {
+    color: $color-black;
+
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    color: $color-black;
+
+    background-color: $color-white;
+    outline: 4px rgba(229, 229, 229, 1);
+  }
+}
+
+.contacts__button-phone {
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  width: 58px;
+  height: 58px;
+
+  background-image: url("/source/img/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.contacts__button-email {
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  width: 58px;
+  height: 58px;
+
+  background-image: url("/source/img/icons/mail.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
 .contacts__impressions-list {
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    gap: 16px;
+    grid-template-columns: 280px 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    padding: 0;
+
+    grid-template-columns: 280px 280px 280px;
+  }
 }
 
 .contacts__impressions-item {
   margin-bottom: 16px;
 
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+
+    &:last-of-type {
+      margin-bottom: 46px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+  }
+}
+
+.contacts__control {
+  position: relative;
+
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.contacts__control-label {
+  padding-left: 62px;
+}
+
+.contacts__control-radio {
+  margin: 0;
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+  width: 46px;
+  height: 46px;
+
+  background-color: $color-gray95;
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+  }
+
+  &:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $color-black;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:checked:hover::before {
+    background-color: #333333;
+  }
+
+  &:checked:active::before {
+    background-color: rgba(51, 51, 51, 0.3);
+  }
 }
 
 .contacts__sights-list {
@@ -94,12 +306,112 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    gap: 16px 32px;
+    grid-template-columns: 224px 224px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    gap: 64px;
+    grid-template-columns: 172px 172px 172px 172px;
+  }
 }
 
 .contacts__sights-item {
   margin-bottom: 16px;
 
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+
+    &:last-of-type {
+      margin-bottom: 42px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 87px 0;
+  }
+}
+
+.contacts__control-checkbox {
+  margin: 0;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  border-radius: 4px;
+
+  width: 46px;
+  height: 46px;
+
+  background-color: $color-gray95;
+  border: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+  }
+
+  &:checked::before {
+    background-image: url("/source/img/icons/tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    width: 22px;
+    height: 16px;
+
+    background-color: #F2F2F2;
+  }
+
+  &:checked:hover::before {
+    background-color: #333333;
+  }
+
+  &:checked:active::before {
+    background-color: rgba(51, 51, 51, 0.3);
+  }
+}
+
+.contacts__title-emotions {
+  margin: 0 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 28px 0;
+  }
+}
+
+.contacts__emotions-input {
+  width: 279px;
+  height: 150px;
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: $color-gray95;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    height: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 768px;
+  }
 }
 
 .contacts__emotions-button {
