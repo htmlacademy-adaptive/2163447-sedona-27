@@ -10,12 +10,16 @@
     <div class="page__container">
       <header class="main-header">
         <a class="main-header__logo">
-          <img
-            src="./img/background/logotype-phone.png"
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/icons/logo-tablet.svg">
+            <img
+            src="img/icons/logo-phone.svg"
             width="185"
             height="96"
             alt="Логотип Седоны."
           />
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav__toggle main-nav__toggle--closed" type="button">
@@ -38,12 +42,14 @@
             </ul>
           </div>
         </nav>
-        <img class="main-header__image"
-        src="./img/icons/text-index.svg"
-        width="901"
-        height="389"
-        alt="Основное изображение Седоны."
-      />
+        <div class="main-header__picture">
+           <img class="main-header__image"
+           src="./img/icons/text-index.svg"
+            width="901"
+           height="389"
+           alt="Основное изображение Седоны."
+         />
+        </div>
       </header>
       <main class="main-container">
         <h1 class="visually-hidden">Седона-туристический городок в Аризоне.</h1>
