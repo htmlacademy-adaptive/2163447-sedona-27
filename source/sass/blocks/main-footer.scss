@@ -1,5 +1,6 @@
 .main-footer {
-  padding: 0 82px 23px 82px;
+  align-items: center;
+  padding: 28px 82px 23px 82px;
 
   text-align: center;
   color: $color-black;
@@ -7,11 +8,11 @@
   background-color: $color-white;
 
   @media (min-width: $tablet-width) {
-    padding: 0 76px 36px 45px;
+    padding: 36px 76px 36px 45px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 136px 36px 104px;
+    padding: 36px 136px 36px 104px;
   }
 }
 

@@ -113,13 +113,64 @@
 
 .advantages__details-item {
   margin: 0;
+  padding: 8px 0 0 0;
+  padding-left: 47px;
+
+  text-align: left;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 33px;
+    padding: 158px 33px 60px 33px;
+
+    text-align: center;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 69px 50px;
+    padding: 169px 50px 69px 50px;
+  }
+}
+
+.advantages__details-item--housing {
+  background-image: url("/source/img/icons/house.svg");
+  background-repeat: no-repeat;
+  background-size: 39px 37px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 50% 60px;
+    background-size: 77px 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 78px 73px;
+  }
+}
+
+.advantages__details-item--food {
+  background-image: url("/source/img/icons/burger.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 35px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 50% 62px;
+    background-size: 80px 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 73px 69px;
+  }
+}
+
+.advantages__details-item--presents {
+  background-image: url("/source/img/icons/gift.svg");
+  background-repeat: no-repeat;
+  background-size: 32px 38px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 50% 62px;
+    background-size: 67px 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 77px 75px;
   }
 }
 

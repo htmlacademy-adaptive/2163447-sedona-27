@@ -258,13 +258,13 @@
 }
 
 .contacts__control-radio {
-  margin: 0;
   position: absolute;
   top: -10px;
   left: 0;
 
   width: 46px;
   height: 46px;
+  margin: 0;
 
   background-color: $color-gray95;
   border: none;
@@ -318,7 +318,7 @@
     padding: 0;
 
     gap: 64px;
-    grid-template-columns: 172px 172px 172px 172px;
+    grid-template-columns: 184px 184px 184px 184px;
   }
 }
 
@@ -344,17 +344,17 @@
 }
 
 .contacts__control-checkbox {
-  margin: 0;
   position: absolute;
   top: -10px;
   left: 0;
-  border-radius: 4px;
 
   width: 46px;
   height: 46px;
+  margin: 0;
 
   background-color: $color-gray95;
   border: none;
+  border-radius: 4px;
 
   &:hover {
     background-color: #e5e5e5;
@@ -365,14 +365,15 @@
   }
 
   &:checked::before {
-    background-image: url("/source/img/icons/tick.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     position: absolute;
+
     width: 22px;
     height: 16px;
 
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
+    background-image: url("/source/img/icons/tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 
   &:checked:hover::before {
@@ -395,6 +396,7 @@
 .contacts__emotions-input {
   width: 279px;
   height: 150px;
+  min-height: 160px;
   margin: 0 auto;
 
   font-weight: 700;
@@ -406,7 +408,6 @@
 
   @media (min-width: $tablet-width) {
     width: 648px;
-    height: 160px;
   }
 
   @media (min-width: $desktop-width) {

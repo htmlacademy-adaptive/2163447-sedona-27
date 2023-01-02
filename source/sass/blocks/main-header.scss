@@ -1,14 +1,32 @@
 .main-header {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 
-  color: $color-black;
+  box-sizing: border-box;
 
   background-color: $color-white;
 }
 
 .main-header__logo {
-  display: block;
+  position: absolute;
+  top: 0;
+
+  width: 185px;
   height: 96px;
-  margin: 0 auto;
+  left: calc(50% - 107px);
+}
+
+.main-header__image {
+  padding-top: 90px;
+  height: 214px;
+  width: 282px;
+  box-sizing: border-box;
+  background-image: url("/source/img/background/main-image.png");
+  background-repeat: no-repeat;
+  background-color: $color-white;
+  background-position: 50% 100%;
+  background-size: 768px auto;
+
+  &::before {
+    background-image: url("/source/img/icons/triangle.svg");
+  }
 }

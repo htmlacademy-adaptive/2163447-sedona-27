@@ -45,13 +45,13 @@
     color: $color-white;
 
     background-color: $color-black;
-    opacity: 0.3;
+    opacity: 30%;
   }
 }
 
 .gallery__wrapper {
   margin: 0;
-  padding: 0 20px 50px 20px;
+  padding: 0 20px 0 20px;
   @media (min-width: $tablet-width) {
     padding: 0 60px 0 60px;
   }
@@ -79,8 +79,28 @@
 }
 
 .gallery__likes--icon {
+  width: 23px;
+  height: 21px;
+  margin-right: 14px;
+
+  background-color: $color-white;
+  background-image: url("/source/img/icons/like.svg");
+  background-repeat: no-repeat;
+  border: none;
+  opacity: 0, 3;
+
+  fill: $color-black;
+
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
+    margin-right: 9px;
+
+    background-color: $color-gray95;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-black;
+    opacity: 30%;
   }
 }
 
