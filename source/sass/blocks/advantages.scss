@@ -91,6 +91,16 @@
   line-height: 21px;
 }
 
+.advantages__image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  background-color: $color-seagull;
+
+  object-fit: cover;
+}
+
 .advantages__details-list {
   display: grid;
   margin: 0;
@@ -130,7 +140,7 @@
 }
 
 .advantages__details-item--housing {
-  background-image: url("/source/img/icons/house.svg");
+  background-image: url("../img/icons/house.svg");
   background-repeat: no-repeat;
   background-size: 39px 37px;
 
@@ -145,7 +155,7 @@
 }
 
 .advantages__details-item--food {
-  background-image: url("/source/img/icons/burger.svg");
+  background-image: url("../img/icons/burger.svg");
   background-repeat: no-repeat;
   background-size: 40px 35px;
 
@@ -160,7 +170,7 @@
 }
 
 .advantages__details-item--presents {
-  background-image: url("/source/img/icons/gift.svg");
+  background-image: url("../img/icons/gift.svg");
   background-repeat: no-repeat;
   background-size: 32px 38px;
 

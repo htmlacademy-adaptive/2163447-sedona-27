@@ -1,124 +1,188 @@
-.main-nav {
-  position: relative;
-  min-height: 55px;
-width: 100%;
-}
-
-.main-nav--closed {
-  display: none;
-}
-
-.main-nav__toogle {
-  position: absolute;
-  display: block;
-  top: 17px;
-  right: 20px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.main-nav__toogle--closed {
-  background-image: url("/source/img/icons/menu.svg");
-  fill: $color-seagull;
-  width: 23px;
-  height: 23px;
-  background-repeat: no-repeat;
-  background-color: $color-white;
-  border: none;
-}
-
-.main-nav__toogle--opened {
-  background-image: url("/source/img/icons/cross.svg");
-  width: 33px;
-  height: 33px;
-  background-repeat: no-repeat;
-  background-color: $color-seagull;
-  border: none;
-}
-
 .main-nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  display: none;
+  width: 100%;
   margin: 0;
   padding: 0;
 
   list-style: none;
 
-  background-color: $color-seagull;
-
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    display: grid;
 
-    margin: 0 auto;
-    background-color: $color-white;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .no-js & {
+    position: static;
+
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+    }
+  }
+
+  .is-open & {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      position: static;
+
+      display: grid;
+    }
   }
 }
 
-.main-nav__item a {
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+
   display: block;
-  box-sizing: border-box;
-  padding: 18px 78px 17px 77px;
+  width: 60px;
+  height: 60px;
+
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 14px;
+
+    height: 4px;
+
+    background-color: $color-seagull;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 20px;
+
+    width: 23px;
+    height: 4px;
+
+    background-color: $color-seagull;
+    box-shadow: 0 9px 0 0 $color-seagull, 0 18px 0 0 $color-seagull;
+  }
+
+  .is-open & {
+    &::before,
+    &::after {
+      background-color: $color-white;
+    }
+
+    &::before {
+      box-shadow: none;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .no-js & {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.main-nav__item {
+  position: relative;
+
+  padding: 17px 0 12px 0;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
-  color: $color-white;
   text-decoration: none;
 
+  background-color: $color-seagull;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2);
 
-  &::before {
-    box-shadow: 0 1px rgba(255, 255, 255, 0.2);
+  &:nth-child(4n + 3) {
+    grid-column-start: 4;
   }
 
   &:hover {
     background-color: #669ec0;
-
-    @media (min-width: $tablet-width) {
-      color: $color-seagull;
-
-      background-color: $color-white;
-    }
   }
 
-  &:active {
-    color: $color-white;
-
+  &:focus {
     background-color: #5496bd;
-    opacity: 30%;
-
-    @media (min-width: $tablet-width) {
-      color: $color-gray;
-
-      background-color: $color-white;
-      opacity: 30%;
-    }
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 18px;
+
     font-size: 14px;
     line-height: 21px;
-    color: $color-black;
 
+    background-color: $color-white;
     border: none;
     box-shadow: none;
-  }
-}
-.main-nav__item--active {
-  a {
-    @media (min-width: $tablet-width) {
+
+    &--current a {
       color: #766357;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $color-white;
     }
   }
 }
 
-.main-nav__item:nth-child(2) {
+.main-nav__link {
+  display: block;
+
+  color: $color-white;
+
   @media (min-width: $tablet-width) {
-    margin-right: 205px;
+    color: $color-black;
+
+    &:focus,
+    &:active {
+      color: $color-black;
+
+      background-color: $color-white;
+      opacity: 0.3;
+    }
+
+    &:hover {
+      color: $color-seagull;
+    }
+
+    &:default {
+      color: $color-black;
+    }
   }
 }
