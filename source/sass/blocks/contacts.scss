@@ -1,6 +1,8 @@
 .contacts__wrapper {
   padding: 0 20px 24px 20px;
 
+  text-transform: uppercase;
+
   @media (min-width: $tablet-width) {
     padding: 0 60px 64px 60px;
   }
@@ -15,17 +17,42 @@
 
   margin: 0 auto;
   padding: 0;
+}
 
+.contacts__form-container {
   @media (min-width: $tablet-width) {
-    display: grid;
+    position: relative;
 
-    gap: 0 88px;
-    grid-template-columns: 280px 280px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+
+      width: 1px;
+      height: 338px;
+
+      background-color: $color-gainsboro;
+      transform: translateX(-50%);
+    }
   }
 
   @media (min-width: $desktop-width) {
-    gap: 0 128px;
-    grid-template-columns: 430px 402px;
+    margin-bottom: 56px;
+  }
+}
+
+.contacts__form-block {
+  margin: 0 0 49px 0;
+  padding: 0;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
   }
 }
 
@@ -33,6 +60,28 @@
 .contacts__form-details {
   margin: 0;
   padding: 0;
+
+  border: none;
+}
+
+.contacts__form-names {
+  @media (min-width: $tablet-width) {
+    width: calc(50% - 43px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(50% - 63px);
+  }
+}
+
+.contacts__form-details {
+  @media (min-width: $tablet-width) {
+    width: calc(50% - 43px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(50% - 63px);
+  }
 }
 
 .contacts__form--name,
@@ -55,7 +104,7 @@
   width: 58px;
   height: 58px;
 
-  background-color: $color-whisper;
+  background-color: $color-light-whisper;
   background-repeat: no-repeat;
   background-position: 50%;
 
@@ -68,15 +117,6 @@
 
 .contacts__form--email-icon::after {
   background-image: url("../img/icons/mail.svg");
-}
-
-.contacts__form-impression,
-.contacts__form-sight,
-.contacts__form-emotions {
-  @media (min-width: $tablet-width) {
-    grid-column-end: 3;
-    grid-column-start: 1;
-  }
 }
 
 .contacts__title {
@@ -109,6 +149,7 @@
 }
 
 .contacts__label {
+  align-self: start;
   position: relative;
   left: 16px;
 
@@ -123,8 +164,31 @@
 
   margin: 0 0 16px 0;
 
-  background-color: $color-gray95;
+  background-color: $color-white-smoke;
   border: none;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+&:default {
+  color: $color-black;
+  background-color: $color-white-smoke;
+}
+
+  &:hover {
+    color: $color-black;
+    background-color: $color-dark-whisper;
+  }
+
+  &:active,
+  &:focus {
+    color: $color-black;
+
+    background-color: $color-white;
+    border: 4px rgba(229, 229, 229, 1);
+    outline: none;
+  }
 }
 
 .contacts__input-name {
@@ -133,7 +197,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: $color-black;
+  background-color: $color-white-smoke;
 
   @media (min-width: $tablet-width) {
     padding: 16px 57px 16px 16px;
@@ -141,25 +205,6 @@
 
   @media (min-width: $desktop-width) {
     padding: 16px 152px 16px 16px;
-  }
-
-  &:default {
-    color: $color-black;
-
-    background-color: $color-gray95;
-  }
-
-  &:hover {
-    color: $color-black;
-
-    background-color: #e5e5e5;
-  }
-
-  &:active {
-    color: $color-black;
-
-    background-color: $color-white;
-    outline: 4px rgba(229, 229, 229, 1);
   }
 }
 
@@ -171,7 +216,6 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: rgba(0, 0, 0, 0.3);
 
   @media (min-width: $tablet-width) {
     padding: 16px 24px 16px 16px;
@@ -180,25 +224,13 @@
   @media (min-width: $desktop-width) {
     padding: 16px 24px 16px 16px;
   }
+}
 
-  &:default {
-    color: $color-black;
-
-    background-color: $color-gray95;
-  }
-
-  &:hover,
-  &:active {
-    color: $color-black;
-
-    background-color: #e5e5e5;
-  }
-
-  &:disabled {
-    color: $color-black;
-
-    background-color: $color-white;
-    outline: 4px solid rgba(229, 229, 229, 1);
+.contacts__form-impression,
+.contacts__form-sight,
+.contacts__form-emotions {
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $color-gainsboro;
   }
 }
 
@@ -215,14 +247,14 @@
   @media (min-width: $tablet-width) {
     max-width: 600px;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
     max-width: none;
 
     gap: 28px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -243,6 +275,18 @@
   }
 }
 
+.contacts__title-impression,
+.contacts__title-sight,
+.contacts__title-emotions {
+  @media (min-width: $tablet-width) {
+    padding: 0 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 63px;
+  }
+}
+
 .contacts__control {
   position: relative;
 
@@ -250,26 +294,8 @@
   min-height: 46px;
   margin-bottom: 16px;
   padding-left: 62px;
-
-  &:active,
-  &:focus {
-    & .contacts__control-radio {
-      background-color: #d5d5d5;
-    }
   }
 
-  &:hover {
-    & .contacts__control-radio {
-      background-color: #e5e5e5;
-    }
-  }
-
-  &:disabled {
-    & .contacts__control-radio {
-      opacity: 0.3;
-    }
-  }
-}
 
 .contacts__control-radio {
   position: absolute;
@@ -279,9 +305,18 @@
   width: 46px;
   height: 46px;
 
-  background-color: $color-gray95;
+  background-color: $color-white-smoke;
   border: none;
   border-radius: 50%;
+
+  &:active,
+  &:focus {
+      background-color: $color-dark-grey;
+  }
+
+  &:hover {
+      background-color: $color-dark-whisper;
+  }
 }
 
 .contacts__control-input:checked + .contacts__control-radio::before {
@@ -293,7 +328,7 @@
   width: 16px;
   height: 16px;
 
-  background-color: #333333;
+  background-color: $color-grey;
   border-radius: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
@@ -310,7 +345,7 @@
 
 .contacts__sights-list {
   display: grid;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
@@ -320,17 +355,14 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
-    padding: 10px 0 18px 0;
 
     gap: 16px 32px;
-    grid-template-columns: 224px 224px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
-
     gap: 64px;
-    grid-template-columns: 184px 184px 184px 184px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -364,16 +396,16 @@
   height: 46px;
   margin: 0;
 
-  background-color: $color-gray95;
+  background-color: $color-white-smoke;
   border: none;
   border-radius: 4px;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: $color-dark-whisper;
   }
 
   &:active {
-    background-color: #d5d5d5;
+    background-color: $color-dark-grey;
   }
 }
 
@@ -383,7 +415,7 @@
   background-position: 50% 50%;
 
   &:checked:hover {
-    background-color: #333333;
+    background-color: $color-grey;
   }
 
   &:checked:active {
@@ -400,41 +432,44 @@
 }
 
 .contacts__emotions-input {
+  display: block;
   width: 100%;
-  padding: 16px 16px 4px 16px;
+  min-height: 150px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+  padding: 0;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
 
-  background-color: $color-gray95;
+  background-color: $color-white-smoke;
   border: none;
 
   resize: none;
   &::placeholder {
     opacity: 0.3;
   }
-
   @media (min-width: $tablet-width) {
-    padding-bottom: 14px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 768px;
+    max-width: 768px;
   }
 
   &:default {
     color: $color-black;
 
-    background-color: $color-gray95;
+    background-color: $color-white-smoke;
   }
 
   &:hover,
   &:active {
     color: $color-black;
 
-    background-color: #e5e5e5;
+    background-color: $color-dark-whisper;
   }
 
   &:disabled {
@@ -446,66 +481,33 @@
 }
 
 .contacts__emotions-wrapper {
-  padding: 11px 2px 0 2px;
+  padding: 0 2px;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 324px 324px;
+
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    padding: 48px 96px 0 96px;
-    grid-template-columns: 384px 384px;
-  }
-}
-
-.contacts__emotions-button {
-  display: block;
-  margin: 0 auto;
-  padding: 16px 49px;
-  width: 100%;
-
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  color: $color-white;
-  text-transform: uppercase;
-
-  background-color: $color-seagull;
-  border: none;
-
-  &:hover {
-    background-color: #669ec0;
-  }
-
-  &:active,
-  &:focus {
-    color: rgba(255, 255, 255, 0.3)
-;
-
-    background-color: #5496bd;
-    outline: none;
-  }
-
-  &:disabled {
-    color: $color-white;
-
-    background-color: #e5e5e5;
+    padding: 0 96px 0 96px;
   }
 }
 
 .contacts__emotions-legend {
-  text-align: right;
   margin: 0;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
+  text-align: right;
   color: rgba(51, 51, 51, 0.6);
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
-    color: $color-gray;
-    margin: 0 auto;
     align-self: center;
+    margin: 0 auto;
+
+    font-size: 14px;
+    color: $color-grey;
   }
 }

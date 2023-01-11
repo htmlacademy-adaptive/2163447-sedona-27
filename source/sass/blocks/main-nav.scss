@@ -120,6 +120,7 @@
   line-height: 26px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 
   background-color: $color-seagull;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -131,11 +132,11 @@
   }
 
   &:hover {
-    background-color: #669ec0;
+    background-color: $color-shakespeare;
   }
 
   &:focus {
-    background-color: #5496bd;
+    background-color: $color-shakespeare-dark;
     opacity: 0.3;
   }
 
@@ -148,10 +149,8 @@
     background-color: $color-white;
     border: none;
     box-shadow: none;
-
-    &--current a {
-      color: #766357;
-    }
+    display: flex;
+    justify-content: center;
 
     &:active,
     &:focus,
@@ -183,6 +182,10 @@
 
     &:default {
       color: $color-black;
+    }
+
+    &--current {
+      color: $color-roman-coffee;
     }
   }
 }

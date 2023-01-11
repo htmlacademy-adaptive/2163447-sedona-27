@@ -3,6 +3,7 @@
 
   text-align: center;
   color: $color-black;
+  text-transform: uppercase;
 
   background-color: $color-white;
 }
@@ -44,7 +45,7 @@
   }
 }
 
-.booking__button {
+.button-link {
   display: block;
   width: 100%;
   padding: 16px 49px;
@@ -54,26 +55,27 @@
   line-height: 26px;
   text-align: center;
   color: $color-white;
+  text-transform: uppercase;
 
   background-color: $color-seagull;
   border: none;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: $color-shakespeare;
   }
 
   &:active,
   &:focus {
     color: rgba(255, 255, 255, 0.3);
 
-    background-color: #5496bd;
+    background-color: $color-shakespeare-dark;
     outline: none;
   }
 
   &:disabled {
     color: $color-white;
 
-    background-color: #e5e5e5;
+    background-color: $color-dark-whisper;
   }
 }
 

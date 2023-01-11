@@ -1,17 +1,15 @@
 .page {
   height: 100%;
-
-  font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
 }
 
 .page__body {
   min-height: 100%;
   margin: 0;
 
+  font-family: "PT Sans", sans-serif;
   color: $color-black;
 
-  background-color: $color-gray95;
+  background-color: $color-white-smoke;
 }
 
 .page__container {

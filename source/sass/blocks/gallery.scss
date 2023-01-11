@@ -34,7 +34,7 @@
     justify-content: space-between;
     padding: 22px 20px 15px 20px;
 
-    background-color: $color-gray95;
+    background-color: $color-white-smoke;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,8 +47,7 @@
 
     color: $color-white;
 
-    background-color: $color-black;
-    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -81,38 +80,46 @@
   text-transform: none;
 }
 
-.gallery__likes--icon {
-  width: 23px;
-  height: 21px;
-  margin-right: 14px;
+.gallery__content-likes {
+  display: flex;
+  align-items: center;
+}
 
-  background-color: $color-white;
-  background-image: url("../img/icons/like.svg");
-  background-repeat: no-repeat;
+.gallery__likes--icon {
+  display: block;
+  margin: auto 14px auto 0;
+  padding: 0;
+
+  color: $color-black;
+
+  background-color: transparent;
   border: none;
 
-  fill: $color-black;
-
   @media (min-width: $tablet-width) {
-    justify-content: flex-end;
     margin-right: 9px;
-
-    background-color: $color-gray95;
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $color-black;
+    color: $color-white;
+  }
+}
 
-    fill: $color-gray;
+.gallery__likes-icon {
+  fill: $color-black;
+  opacity: 0.3;
+
+  @media (min-width: $desktop-width) {
+    fill: $color-white;
   }
 }
 
 .gallery__image {
+  display: block;
   width: 100%;
   max-height: 400px;
   margin: 0 0 15px 0;
 
-  background-color: $color-gray;
+  background-color: $color-grey;
 
   object-fit: cover;
 
@@ -131,11 +138,11 @@
     display: grid;
 
     gap: 0;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
