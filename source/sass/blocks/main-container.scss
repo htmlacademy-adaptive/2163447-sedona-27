@@ -1,3 +1,119 @@
 .main-container {
   width: 100%;
 }
+
+.main-container__picture {
+  position: relative;
+
+  padding-top: 90px;
+  padding-bottom: 91px;
+
+  text-align: center;
+
+  background-color: $color-seagull;
+  background-image: url("../img/background/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% bottom;
+  background-size: cover;
+
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/back-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 518px;
+    padding-top: 77px;
+    padding-bottom: 91px;
+
+    background-image: url("../img/background/back-tablet.jpg");
+
+    clip-path: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 518px;
+    padding-top: 78px;
+    padding-bottom: 90px;
+
+    background-image: url("../img/background/back-desktop.jpg");
+
+    clip-path: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/back-desktop@2x.jpg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    height: 57px;
+
+    background-image: url("../img/icons/triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+
+      border: none;
+      outline: none;
+    }
+  }
+
+  &--form,
+  &--catalog {
+    padding: 52px 45px 67px 45px;
+
+    background-image: url("../img/background/main-mobile-inner.jpg");
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/main-mobile-inner@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      min-height: 290px;
+      padding-top: 95px;
+
+      background-image: url("../img/background/back-tablet-inner.jpg");
+
+      clip-path: none;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/back-tablet-inner@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 301px;
+      padding-top: 101px;
+
+      background-image: url("../img/background/back-desktop-inner.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/back-desktop-inner@2x.jpg");
+      }
+    }
+  }
+}
+
+.main-container__image {
+  display: block;
+  width: 100%;
+  max-width: 461px;
+  margin: 0 auto;
+}
