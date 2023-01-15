@@ -171,10 +171,10 @@
     color: rgba(0, 0, 0, 0.3);
   }
 
-&:default {
-  color: $color-black;
-  background-color: $color-white-smoke;
-}
+  &:default {
+    color: $color-black;
+    background-color: $color-white-smoke;
+  }
 
   &:hover {
     color: $color-black;
@@ -295,8 +295,7 @@
   margin-bottom: 16px;
   padding-left: 62px;
   cursor: pointer;
-  }
-
+}
 
 .contacts__control-radio {
   position: absolute;
@@ -312,11 +311,11 @@
 
   &:active,
   &:focus {
-      background-color: $color-dark-grey;
+    background-color: $color-dark-grey;
   }
 
   &:hover {
-      background-color: $color-dark-whisper;
+    background-color: $color-dark-whisper;
   }
 }
 
@@ -336,7 +335,7 @@
 
 .contacts__control-input:focus + .contacts__control-radio,
 .contacts__control-input:focus + .contacts__control-checkbox {
-  outline: 1px solid black;
+  outline: 1px solid $color-black;
 }
 
 .contacts__control-name {
@@ -467,10 +466,10 @@
     color: rgba(0, 0, 0, 0.3);
   }
 
-&:default {
-  color: $color-black;
-  background-color: $color-white-smoke;
-}
+  &:default {
+    color: $color-black;
+    background-color: $color-white-smoke;
+  }
 
   &:hover {
     color: $color-black;
