@@ -195,7 +195,7 @@
 .advantages__list {
   display: grid;
   margin: 0;
-  padding: 24px 18px 26px 28px;
+  padding: 24px 18px 0 28px;
 
   list-style: none;
   color: $color-black;
@@ -210,7 +210,26 @@
 }
 
 .advantages__item {
+  position: relative;
+
+  margin: 0;
   padding: 26px 24px;
+
+  &::after:not(:last-of-type) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $color-dark-whisper;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding: 52px 33px;
@@ -236,6 +255,15 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+  }
+}
+
+.advantages__wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
   }
 }
 

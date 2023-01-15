@@ -1,0 +1,133 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  text-transform: uppercase;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal--is-open {
+  display: flex;
+}
+
+.modal__container {
+  position: relative;
+
+  background-color: $color-white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal__container--failure .modal__content--success,
+.modal__container--success .modal__content--failure {
+  display: none;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 400px;
+
+  &--success {
+    max-width: 640px;
+  }
+}
+
+.modal__content--failure .modal__content-wrapper {
+  padding: 45px 42px 28px 41px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 47px 25px 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 48px 47px 23px 46px;
+  }
+}
+
+.modal__content--success .modal__content-wrapper {
+  padding: 39px 39px 30px 37px;
+
+  @media (min-width: $tablet-width) {
+    padding: 53px 99px 30px 97px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 51px 99px 28px 97px;
+  }
+}
+
+.modal__content-title {
+  margin: 0 0 37px 0;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__content-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0 40px 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.modal__content-button {
+  padding: 0 70px 35px 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0 64px 49px 64px;
+  }
+
+ &--success {
+    margin: 0;
+    padding: 20px;
+
+    background-color: $color-white-smoke;
+
+    @media (min-width: $tablet-width) {
+      padding: 44px 91px;
+    }
+  }
+}
+
+.modal__button{
+  font-size: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.modal__content--failure .modal__button {
+  padding: 18px 64px 14px 63px;
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 108px 14px 107px;
+  }
+}
+
+.modal__content--success .modal__button {
+  padding: 18px 62px 14px 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 140px 14px 139px;
+  }
+}

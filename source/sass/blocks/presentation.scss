@@ -12,6 +12,7 @@
 
 .presentation__player {
   position: relative;
+
   max-width: 800px;
   margin: 0 auto;
 }
@@ -33,7 +34,23 @@
 
   border: none;
   transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
   opacity: 0.6;
 
   clip-path: polygon(100% 50%, 0 0, 0 100%);
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+
+    pointer-events: none;
+  }
 }

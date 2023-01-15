@@ -294,6 +294,7 @@
   min-height: 46px;
   margin-bottom: 16px;
   padding-left: 62px;
+  cursor: pointer;
   }
 
 
@@ -333,6 +334,11 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
+.contacts__control-input:focus + .contacts__control-radio,
+.contacts__control-input:focus + .contacts__control-checkbox {
+  outline: 1px solid black;
+}
+
 .contacts__control-name {
   display: block;
   padding: 10px 0;
@@ -354,13 +360,13 @@
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto;
-
     gap: 16px 32px;
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 124px 0 84px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 0;
     gap: 64px;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -437,20 +443,18 @@
   min-height: 150px;
   margin: 0 auto;
   margin-bottom: 56px;
-  padding: 0;
+  padding: 16px;
+  font-family: inherit;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: rgba(0, 0, 0, 0.3);
 
   background-color: $color-white-smoke;
   border: none;
 
   resize: none;
-  &::placeholder {
-    opacity: 0.3;
-  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 48px;
   }
@@ -459,24 +463,27 @@
     max-width: 768px;
   }
 
-  &:default {
-    color: $color-black;
-
-    background-color: $color-white-smoke;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
   }
 
-  &:hover,
-  &:active {
-    color: $color-black;
+&:default {
+  color: $color-black;
+  background-color: $color-white-smoke;
+}
 
+  &:hover {
+    color: $color-black;
     background-color: $color-dark-whisper;
   }
 
-  &:disabled {
+  &:active,
+  &:focus {
     color: $color-black;
 
     background-color: $color-white;
-    outline: 4px solid rgba(229, 229, 229, 1);
+    border: 4px rgba(229, 229, 229, 1);
+    outline: none;
   }
 }
 

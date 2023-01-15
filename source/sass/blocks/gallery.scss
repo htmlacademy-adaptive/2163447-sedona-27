@@ -2,16 +2,50 @@
   width: 100%;
 }
 
+.gallery__header {
+  margin: 0;
+}
+
 .gallery__main-img {
   margin: 0;
 }
 
 .gallery__content {
+  position: relative;
+
   margin: 0;
-  padding: 0;
+  padding: 25px 0 27px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+
+    width: calc(100% + 36px);
+    height: 1px;
+
+    background-color: $color-dark-whisper;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width:$tablet-width){
+    padding: 0;
+  }
 
   @media (min-width: $desktop-width) {
     position: relative;
+
+    display: flex;
+    height: 100%;
+    padding-top: 187px;
+
+    &--main {
+      padding-top: 320px;
+    }
   }
 }
 
@@ -26,6 +60,17 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
+  }
 }
 
 .gallery__content-description {
@@ -35,15 +80,16 @@
     padding: 22px 20px 15px 20px;
 
     background-color: $color-white-smoke;
+
+    gap: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    z-index: 1;
 
-    width: 100%;
-    height: 80px;
+    flex-grow: 1;
+    align-items: start;
 
     color: $color-white;
 
@@ -54,6 +100,7 @@
 .gallery__wrapper {
   margin: 0;
   padding: 0 20px 0 20px;
+
   @media (min-width: $tablet-width) {
     padding: 0 60px 0 60px;
   }
@@ -64,7 +111,7 @@
 }
 
 .gallery__heading {
-  margin: 0 0 11px 0;
+  margin: 0;
 
   font-weight: 700;
   font-size: 14px;
@@ -78,11 +125,16 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .gallery__content-likes {
   display: flex;
   align-items: center;
+  align-self: center;
 }
 
 .gallery__likes--icon {
@@ -105,12 +157,19 @@
 }
 
 .gallery__likes-icon {
-  fill: $color-black;
   opacity: 0.3;
 
+  fill: $color-black;
+
   @media (min-width: $desktop-width) {
+    opacity: 1;
+
     fill: $color-white;
   }
+}
+
+.gallery__likes-text {
+  font-size: 14px;
 }
 
 .gallery__image {
@@ -125,6 +184,17 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
   }
 }
 
@@ -149,4 +219,5 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }

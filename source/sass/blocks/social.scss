@@ -24,9 +24,11 @@
 }
 
 .social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 
-  display: block;
   width: 48px;
   height: 48px;
   padding: 12px;
@@ -42,24 +44,19 @@
     height: 36px;
 
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--vkontakte::before {
     background-image: url("../img/icons/vkontakte.svg");
-    top: 17px;
-    left: 12px;
   }
 
   &--telegram::before {
     background-image: url("../img/icons/telegram.svg");
-    top: 15px;
-    left: 14px;
   }
 
   &--youtube::before {
     background-image: url("../img/icons/youtube.svg");
-    top: 17px;
-    left: 14px;
   }
 
   &:hover {

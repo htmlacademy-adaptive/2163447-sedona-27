@@ -79,6 +79,14 @@
   .is-open & {
     &::before,
     &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 20px;
+
+      width: 23px;
+      height: 4px;
+
       background-color: $color-white;
     }
 
@@ -119,8 +127,8 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
 
   background-color: $color-seagull;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -141,6 +149,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
     padding-top: 18px;
 
     font-size: 14px;
@@ -149,8 +159,6 @@
     background-color: $color-white;
     border: none;
     box-shadow: none;
-    display: flex;
-    justify-content: center;
 
     &:active,
     &:focus,
