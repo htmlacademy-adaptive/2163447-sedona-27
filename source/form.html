@@ -47,7 +47,7 @@
       <main class="main-container">
         <section class="main-container__picture main-container__picture--form">
           <h1 class="visually-hidden">Форма обратной связи</h1>
-          <img class="main-container__image"
+          <img class="main-container__image main-container__image--form"
           src="img/icons/sedona.svg"
           width="282"
           height="214"
@@ -55,10 +55,9 @@
         </section>
         <section class="contacts">
           <div class="contacts__header heading">
-            <h2 class="heading__title">Оставьте свой отзыв</h2>
+            <h2 class="heading__title heading__title-contacts">Оставьте свой отзыв</h2>
             <p class="heading__description">
-              Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
-              посещенных вами достопримечательностях
+              Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях
             </p>
           </div>
           <div class="contacts__wrapper">
@@ -71,7 +70,7 @@
               method="post">
               <div class="contacts__form-container">
                 <fieldset class="contacts__form-block contacts__form-names">
-                  <legend class="contacts__title">Представьтесь:</legend>
+                  <legend class="contacts__title contacts__title-name">Представьтесь:</legend>
                   <div class="contacts__form contacts__form--name">
                     <label class="contacts__label" for="name">Имя*:</label>
                     <input
@@ -225,15 +224,15 @@
                 <legend class="contacts__title contacts__title-emotions">Опишите свои эмоции:</legend>
                   <textarea class="contacts__emotions-input" placeholder="Опишите подробно все свои восторги"></textarea>
               </fieldset>
-              <div class="contacts__emotions-wrapper">
-                <button class="contacts__emotions-button button-link" type="submit">
-                  Отправить отзыв
-                </button>
-                <p class="contacts__emotions-legend">
-                  *-Обязательные поля
-                </p>
-              </div>
             </form>
+          </div>
+          <div class="contacts__emotions-wrapper">
+            <button class="contacts__emotions-button button-link" type="submit">
+              Отправить отзыв
+            </button>
+            <p class="contacts__emotions-legend">
+              *-Обязательные поля
+            </p>
           </div>
         </section>
       </main>
@@ -273,7 +272,10 @@
         </div>
       </footer>
     </div>
-    <div class="modal modal--is-open">
+
+    <!-- Для показа модального окна на класс modal необходимо добавить modal--open -->
+
+    <div class="modal">
       <div class="modal__container modal__container--failure">
         <section class="modal__content modal__content--failure">
           <div class="modal__content-wrapper">
@@ -287,6 +289,8 @@
           </div>
         </section>
       </div>
+    </div>
+    <div class="modal">
       <div class="modal__container modal__container--success">
         <section class="modal__content modal__content--success">
           <div class="modal__content-wrapper">

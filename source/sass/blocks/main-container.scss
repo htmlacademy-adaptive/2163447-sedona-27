@@ -16,7 +16,7 @@
   background-position: 50% bottom;
   background-size: cover;
 
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 98%, 0 92%);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/back-mobile@2x.jpg");
@@ -79,7 +79,7 @@
 
     background-image: url("../img/background/main-mobile-inner.jpg");
 
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/main-mobile-inner@2x.jpg");
@@ -113,7 +113,19 @@
 
 .main-container__image {
   display: block;
-  width: 100%;
+  width: 282px;
   max-width: 461px;
+  height: 214px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
+
+  &--catalog,
+  &--form {
+    width: 100%;
+    height: auto;
+  }
 }

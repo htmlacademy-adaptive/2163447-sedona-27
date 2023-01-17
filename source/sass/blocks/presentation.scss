@@ -6,7 +6,31 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 0 60px 40px 60px;
+    margin-bottom: 40px;
+    padding: 0 60px 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 97px;
+  }
+}
+
+.presentation__header {
+  padding-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+    padding-top: 57px;
+  }
+}
+
+.heading__title-presentation {
+  margin: 0 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 28px 0;
+
+    font-size: 30px;
   }
 }
 
