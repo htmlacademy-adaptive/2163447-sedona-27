@@ -46,7 +46,7 @@
       </header>
       <main class="main-container">
         <section class="main-container__picture main-container__picture--form">
-          <h1 class="visually-hidden">Форма обратной связи</h1>
+          <h1 class="visually-hidden">Форма обратной связи.</h1>
           <img class="main-container__image main-container__image--form"
           src="img/icons/sedona.svg"
           width="282"
@@ -55,7 +55,7 @@
         </section>
         <section class="contacts">
           <div class="contacts__header heading">
-            <h2 class="heading__title heading__title-contacts">Оставьте свой отзыв</h2>
+            <h2 class="heading__title heading__title--contacts">Оставьте свой отзыв</h2>
             <p class="heading__description">
               Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях
             </p>
@@ -77,16 +77,16 @@
                       class="contacts__input contacts__input-name"
                       type="text"
                       name="name"
-                      placeholder="Пётр"
+                      value="Пётр"
                       id="name">
                   </div>
                   <div class="contacts__form contacts__form--surname">
-                    <label class="contacts__label" for="name">Фамилия*:</label>
+                    <label class="contacts__label" for="surname">Фамилия*:</label>
                     <input
                       class="contacts__input contacts__input-name"
                       type="text"
                       name="surname"
-                      placeholder="Пустота"
+                      value="Пустота"
                       id="surname">
                   </div>
                   <div class="contacts__form contacts__form--patronymic">
@@ -95,7 +95,7 @@
                       class="contacts__input contacts__input-name"
                       type="text"
                       name="patronymic"
-                      placeholder="Викторович"
+                      value="Викторович"
                       id="patronymic">
                   </div>
                 </fieldset>
@@ -222,7 +222,7 @@
               </fieldset>
               <fieldset class="contacts__form-block  contacts__form-emotions">
                 <legend class="contacts__title contacts__title-emotions">Опишите свои эмоции:</legend>
-                  <textarea class="contacts__emotions-input" placeholder="Опишите подробно все свои восторги"></textarea>
+                  <textarea class="contacts__emotions-input" placeholder="Опишите подробно все свои восторги" aria-label="Описание впечатлений от посещения достопримечательностей."></textarea>
               </fieldset>
             </form>
           </div>
@@ -285,7 +285,7 @@
             <p class="modal__content-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
           </div>
           <div class="modal__content-button">
-            <button class="modal__button button-link">Ок</button>
+            <button class="modal__button button-link" type="button">Ок</button>
           </div>
         </section>
       </div>
@@ -300,7 +300,7 @@
             <p class="modal__content-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
           </div>
           <div class="modal__content-button modal__content-button--success">
-            <button class="modal__button button-link">Закрыть окно</button>
+            <button class="modal__button button-link" type="button">Закрыть окно</button>
           </div>
         </section>
       </div>

@@ -57,26 +57,29 @@
         </section>
         <section class="gallery">
             <div class="gallery__header heading">
-              <h2 class="heading__title heading__title-gallery">Фото и видео</h2>
-              <p class="heading__description heading__description-gallery">
-                Не&nbsp;можете решиться на&nbsp;путешествие <nobr>из-за</nobr> курса?&#8233;Фотографии помогут вам забыть о&nbsp;политике и&nbsp;экономике.&#8233;
+              <h2 class="heading__title heading__title--gallery">Фото и видео</h2>
+              <p class="heading__description heading__description--gallery">
+                Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии помогут вам забыть о&nbsp;политике и&nbsp;экономике.
               </p>
             </div>
           <div class="gallery__wrapper">
             <div class="gallery__main-img">
               <figure class="gallery__content gallery__content--main">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/mountains-desktop.webp 1x, img/catalog/mountains-desktop@2x.webp 2x">
-                  <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/mountains-tablet.webp 1x, img/catalog/mountains-tablet@2x.webp 2x">
-                  <source type="image/webp"  srcset="img/catalog/mountains-mobile.webp 1x, img/catalog/mountains-mobile@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/catalog/mountains-desktop.jpg 1x, img/catalog/mountains-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/catalog/mountains-tablet.jpg 1x, img/catalog/mountains-tablet@2x.jpg 2x">
-                  <img class="gallery__image gallery__image-main"
-                  src="img/catalog/mountains-mobile.jpg"  srcset="img/catalog/mountains-mobile@2x.jpg"
-                  width="280"
-                  height="280"
-                  alt="Изображение гор на закате.">
-                </picture>
+                <a class="gallery__link" href="#">
+                  <span class="visually-hidden">Переход на страницу фотографий пейзажей.</span>
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/mountains-desktop.webp 1x, img/catalog/mountains-desktop@2x.webp 2x">
+                    <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/mountains-tablet.webp 1x, img/catalog/mountains-tablet@2x.webp 2x">
+                    <source type="image/webp"  srcset="img/catalog/mountains-mobile.webp 1x, img/catalog/mountains-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/mountains-desktop.jpg 1x, img/catalog/mountains-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/mountains-tablet.jpg 1x, img/catalog/mountains-tablet@2x.jpg 2x">
+                    <img class="gallery__image gallery__image-main"
+                    src="img/catalog/mountains-mobile.jpg"  srcset="img/catalog/mountains-mobile@2x.jpg"
+                    width="280"
+                    height="280"
+                    alt="Изображение гор на закате.">
+                  </picture>
+                </a>
                 <figcaption class="gallery__content-description">
                   <div class="gallery__content-author">
                     <h3 class="gallery__heading">Неродные просторы</h3>
@@ -86,6 +89,7 @@
                     <button
                       class="gallery__likes gallery__likes--icon"
                       type="button">
+                      <span class="visually-hidden">Поставить лайк.</span>
                       <svg class="gallery__likes-icon" width="23" height="21">
                         <use xlink:href="img/sprite/sprite.svg#icon-like"></use>
                       </svg>
@@ -98,18 +102,21 @@
             <ul class="gallery__list">
               <li class="gallery__item">
                 <figure class="gallery__content">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cactus-desktop.webp 1x, img/catalog/cactus-desktop@2x.webp 2x">
-                    <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/cactus-tablet.webp 1x, img/catalog/cactus-tablet@2x.webp 2x">
-                    <source type="image/webp"  srcset="img/catalog/cactus-mobile.webp 1x, img/catalog/cactus-mobile@2x.webp 2x">
-                    <source media="(min-width: 1200px)" srcset="img/catalog/cactus-desktop.jpg 1x, img/catalog/cactus-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/cactus-tablet.jpg 1x, img/catalog/cactus-tablet@2x.jpg 2x">
-                    <img class="gallery__image"
-                    src="img/catalog/cactus-mobile.jpg"  srcset="img/catalog/cactus-mobile@2x.jpg"
-                    width="280"
-                    height="280"
-                    alt="Изображение кактуса.">
-                  </picture>
+                  <a class="gallery__link" href="#">
+                    <span class="visually-hidden">Переход на страницу фотографий местной растительности.</span>
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cactus-desktop.webp 1x, img/catalog/cactus-desktop@2x.webp 2x">
+                      <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/cactus-tablet.webp 1x, img/catalog/cactus-tablet@2x.webp 2x">
+                      <source type="image/webp"  srcset="img/catalog/cactus-mobile.webp 1x, img/catalog/cactus-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" srcset="img/catalog/cactus-desktop.jpg 1x, img/catalog/cactus-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/cactus-tablet.jpg 1x, img/catalog/cactus-tablet@2x.jpg 2x">
+                      <img class="gallery__image"
+                      src="img/catalog/cactus-mobile.jpg"  srcset="img/catalog/cactus-mobile@2x.jpg"
+                      width="280"
+                      height="280"
+                      alt="Изображение кактуса.">
+                    </picture>
+                  </a>
                   <figcaption class="gallery__content-description">
                     <div class="gallery__content-author">
                       <h3 class="gallery__heading">Местная растительность</h3>
@@ -119,6 +126,7 @@
                       <button
                         class="gallery__likes gallery__likes--icon"
                         type="button">
+                        <span class="visually-hidden">Поставить лайк.</span>
                         <svg class="gallery__likes-icon" width="23" height="21">
                           <use xlink:href="img/sprite/sprite.svg#icon-like"></use>
                         </svg>
@@ -130,18 +138,21 @@
               </li>
               <li class="gallery__item">
                 <figure class="gallery__content">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/road-desktop.webp 1x, img/catalog/road-desktop@2x.webp 2x">
-                    <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/road-tablet.webp 1x, img/catalog/road-tablet@2x.webp 2x">
-                    <source type="image/webp"  srcset="img/catalog/road-mobile.webp 1x, img/catalog/road-mobile@2x.webp 2x">
-                    <source media="(min-width: 1200px)" srcset="img/catalog/road-desktop.jpg 1x, img/catalog/road-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/road-tablet.jpg 1x, img/catalog/road-tablet@2x.jpg 2x">
-                    <img class="gallery__image"
-                    src="img/catalog/road-mobile.jpg"  srcset="img/catalog/road-mobile@2x.jpg"
-                    width="280"
-                    height="280"
-                    alt="Изображение дороги.">
-                  </picture>
+                  <a class="gallery__link" href="#">
+                    <span class="visually-hidden">Переход на страницу фотографий дороги.</span>
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/road-desktop.webp 1x, img/catalog/road-desktop@2x.webp 2x">
+                      <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/road-tablet.webp 1x, img/catalog/road-tablet@2x.webp 2x">
+                      <source type="image/webp"  srcset="img/catalog/road-mobile.webp 1x, img/catalog/road-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" srcset="img/catalog/road-desktop.jpg 1x, img/catalog/road-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/road-tablet.jpg 1x, img/catalog/road-tablet@2x.jpg 2x">
+                      <img class="gallery__image"
+                      src="img/catalog/road-mobile.jpg"  srcset="img/catalog/road-mobile@2x.jpg"
+                      width="280"
+                      height="280"
+                      alt="Изображение дороги.">
+                    </picture>
+                  </a>
                   <figcaption class="gallery__content-description">
                     <div class="gallery__content-author">
                       <h3 class="gallery__heading">Дорога на Север</h3>
@@ -151,6 +162,7 @@
                       <button
                         class="gallery__likes gallery__likes--icon"
                         type="button">
+                        <span class="visually-hidden">Поставить лайк.</span>
                         <svg class="gallery__likes-icon" width="23" height="21">
                           <use xlink:href="img/sprite/sprite.svg#icon-like"></use>
                         </svg>
@@ -162,18 +174,21 @@
               </li>
               <li class="gallery__item">
                 <figure class="gallery__content">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/canyon-desktop.webp 1x, img/catalog/canyon-desktop@2x.webp 2x">
-                    <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/canyon-tablet.webp 1x, img/catalog/canyon-tablet@2x.webp 2x">
-                    <source type="image/webp"  srcset="img/catalog/canyon-mobile.webp 1x, img/catalog/canyon-mobile@2x.webp 2x">
-                    <source media="(min-width: 1200px)" srcset="img/catalog/canyon-desktop.jpg 1x, img/catalog/canyon-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/canyon-tablet.jpg 1x, img/catalog/canyon-tablet@2x.jpg 2x">
-                    <img class="gallery__image"
-                    src="img/catalog/canyon-mobile.jpg"  srcset="img/catalog/canyon-mobile@2x.jpg"
-                    width="280"
-                    height="280"
-                    alt="Изображение моста Дьявола.">
-                  </picture>
+                  <a class="gallery__link" href="#">
+                    <span class="visually-hidden">Переход на страницу фотографий моста Дьявола.</span>
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/canyon-desktop.webp 1x, img/catalog/canyon-desktop@2x.webp 2x">
+                      <source type="image/webp"  media="(min-width: 768px)" srcset="img/catalog/canyon-tablet.webp 1x, img/catalog/canyon-tablet@2x.webp 2x">
+                      <source type="image/webp"  srcset="img/catalog/canyon-mobile.webp 1x, img/catalog/canyon-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" srcset="img/catalog/canyon-desktop.jpg 1x, img/catalog/canyon-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/canyon-tablet.jpg 1x, img/catalog/canyon-tablet@2x.jpg 2x">
+                      <img class="gallery__image"
+                      src="img/catalog/canyon-mobile.jpg"  srcset="img/catalog/canyon-mobile@2x.jpg"
+                      width="280"
+                      height="280"
+                      alt="Изображение моста Дьявола.">
+                    </picture>
+                  </a>
                   <figcaption class="gallery__content-description">
                     <div class="gallery__content-author">
                       <h3 class="gallery__heading">Мост Дьявола</h3>
@@ -182,6 +197,7 @@
                     <div class="gallery__content-likes">
                       <button
                         class="gallery__likes gallery__likes--icon" type="submit">
+                        <span class="visually-hidden">Поставить лайк.</span>
                         <svg class="gallery__likes-icon" width="23" height="21">
                           <use xlink:href="img/sprite/sprite.svg#icon-like"></use>
                         </svg>
@@ -197,7 +213,7 @@
         <section class="presentation">
           <div class="presentation__wrapper">
             <div class="presentation__header heading">
-              <h2 class="heading__title heading__title-presentation">Все еще сомневаетесь?</h2>
+              <h2 class="heading__title heading__title--presentation">Все еще сомневаетесь?</h2>
               <p class="heading__description">
                 Смотрите видеопрезентацию и скорее за билетами, пока они не
                 подорожали в очередной раз!
@@ -216,7 +232,9 @@
                 height="177"
                 alt="Заставка видео-презентации о Седоне.">
               </picture>
-              <button class="presentation__button" type="button"></button>
+              <button class="presentation__button" type="button">
+                <span class="visually-hidden">Воспроизвести видео.</span>
+              </button>
             </div>
           </div>
         </section>
