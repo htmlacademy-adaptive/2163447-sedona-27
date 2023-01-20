@@ -1,0 +1,34 @@
+.copyright-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  color: $color-black;
+  text-decoration: none;
+
+  fill: $color-black;
+
+  &:hover {
+    color: $color-seagull;
+
+    fill: $color-seagull;
+  }
+
+  &:active,
+  &:focus {
+    color: $color-pink-swan;
+
+    outline: none;
+
+    fill: $color-pink-swan;
+  }
+}
+
+.copyright-link__text {
+  margin-right: 11px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}

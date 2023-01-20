@@ -47,7 +47,7 @@
 
 .advantages__card-content {
   margin: 0;
-  padding: 59px 18px 35px 18px;
+  padding: 60px 18px 35px 18px;
 
   color: $color-white;
 
@@ -120,16 +120,6 @@
 
   font-size: 14px;
   line-height: 21px;
-
-  &--second {
-    @media (min-width: $tablet-width) {
-      margin: 0 18px 0 18px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin: 0 26px 0 26px;
-    }
-  }
 }
 
 .advantages__image {
@@ -164,7 +154,7 @@
 
 .advantages__details-item {
   margin: 0;
-  padding: 8px 0 0 47px;
+  padding: 10px 0 0 47px;
 
   text-align: left;
 
@@ -280,7 +270,7 @@
 .advantages__list {
   display: grid;
   margin: 0;
-  padding: 24px 26px 0 26px;
+  padding: 0 26px 0 26px;
 
   list-style: none;
   color: $color-black;
@@ -297,7 +287,7 @@
 .advantages__item {
   position: relative;
 
-  padding: 52px 33px;
+  padding: 24px 0;
 
   &::after:not(:last-of-type) {
     content: "";

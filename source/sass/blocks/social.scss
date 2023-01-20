@@ -66,8 +66,8 @@
   &:active,
   &:focus {
     background-color: $color-shakespeare-dark;
-    outline: none;
     opacity: 0.3;
+    outline: none;
 
     &::before {
       opacity: 0.3;
