@@ -7,23 +7,25 @@
   text-transform: uppercase;
 
   background-color: $color-white;
-
-  @media (min-width: $tablet-width) {
-    padding: 36px 45px 36px 43px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 36px 120px 36px 104px;
-  }
 }
 
-.main-footer__index {
+.main-footer--index {
   @media (min-width: $tablet-width) {
     padding: 30px 43px 36px 42px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 30px 136px 36px 102px;
+  }
+}
+
+.main-footer--inner {
+  @media (min-width: $tablet-width) {
+    padding: 36px 45px 36px 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 120px 36px 104px;
   }
 }
 
