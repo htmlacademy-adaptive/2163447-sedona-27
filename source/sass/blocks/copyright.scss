@@ -19,6 +19,8 @@
   &:focus {
     color: $color-pink-swan;
 
+    outline: none;
+
     fill: $color-pink-swan;
   }
 }
