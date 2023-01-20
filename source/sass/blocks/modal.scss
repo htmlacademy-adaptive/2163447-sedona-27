@@ -14,7 +14,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.modal--is-open {
+.modal--open {
   display: flex;
 }
 
@@ -111,24 +111,9 @@
 
 .modal__button {
   font-size: 18px;
+  min-width: 280px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
-  }
-}
-
-.modal__content--failure .modal__button {
-  padding: 18px 64px 14px 63px;
-
-  @media (min-width: $tablet-width) {
-    padding: 19px 108px 14px 107px;
-  }
-}
-
-.modal__content--success .modal__button {
-  padding: 18px 62px 14px 60px;
-
-  @media (min-width: $tablet-width) {
-    padding: 19px 140px 14px 139px;
   }
 }

@@ -22,12 +22,12 @@
     display: grid;
     align-items: center;
 
-    gap: 100px;
-    grid-template-columns: 166px 156px 128px;
+    gap: 20%;
+    grid-template-columns: 166px 156px 148px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 254px;
+    gap: 27%;
   }
 }
 
@@ -41,36 +41,4 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
-}
-
-.copyright-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: $color-black;
-  text-decoration: none;
-
-  fill: $color-black;
-
-  &:hover {
-    color: $color-seagull;
-
-    fill: $color-seagull;
-  }
-
-  &:active,
-  &:focus {
-    color: $color-pink-swan;
-
-    fill: $color-pink-swan;
-  }
-}
-
-.copyright-link__text {
-  margin-right: 11px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
 }

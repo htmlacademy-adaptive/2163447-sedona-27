@@ -15,23 +15,3 @@ $color-roman-coffee: #766357;
 $color-gainsboro: #dbdbdb;
 $tablet-width: 768px;
 $desktop-width: 1200px;
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "PT Sans";
-
-  font-display: swap;
-  src: url("../fonts/ptsans.woff") format("woff");
-  src: url("../fonts/ptsans.woff2") format("woff2");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 700;
-  font-family: "PT Sans";
-
-  font-display: swap;
-  src: url("../fonts/ptsansbold.woff") format("woff");
-  src: url("../fonts/ptsansbold.woff2") format("woff2");
-}
